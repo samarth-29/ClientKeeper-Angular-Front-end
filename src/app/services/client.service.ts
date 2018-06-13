@@ -19,4 +19,11 @@ export class ClientService{
         return this.http.post('http://localhost:3000/api/clients', client, {headers: headers})
             .map(res => res.json());
     }
+
+    updateClient(client){
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        return this.http.put('http://localhost:3000/api/clients/'+client._id, client, {headers: headers})
+            .map(res => res.json());
+    }
 }
