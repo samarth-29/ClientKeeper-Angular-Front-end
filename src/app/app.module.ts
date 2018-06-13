@@ -5,12 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import {ClientsComponent} from './components/clients/clients.component';
+import {NavbarComponent} from './components/navbar/navbar.component';
+
 import {ClientService} from './services/client.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClientsComponent
+    ClientsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
