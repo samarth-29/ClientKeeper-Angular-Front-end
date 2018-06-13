@@ -12,4 +12,11 @@ export class ClientService{
         return this.http.get('http://localhost:3000/api/clients')
             .map(res => res.json());
     }
+
+    saveClient(client){
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        return this.http.post('http://localhost:3000/api/clients', client, {headers: headers})
+            .map(res => res.json());
+    }
 }
