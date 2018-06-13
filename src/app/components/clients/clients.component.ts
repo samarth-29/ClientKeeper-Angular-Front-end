@@ -73,4 +73,14 @@ export class ClientsComponent implements OnInit{
    this.phone = client.phone;
    this._id = client._id;
  }
+
+ onDeleteClick(id){
+   this.clientService.deleteClient(id).subscribe(client => {
+     for(let i = 0; i < this.clients.length;i++){
+       if(id == this.clients[i]._id){
+         this.clients.splice(i, 1);
+       }
+     }
+   });
+ }
 }
