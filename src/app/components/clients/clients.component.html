@@ -59,7 +59,8 @@
             <td>{{client.last_name}}</td>
             <td>{{client.email}}</td>
             <td>{{client.phone}}</td>
-            <td><a (click)="onEditClick(client)" href="#" class="btn btn-default">Edit</a> <a href="" class="btn btn-danger">Delete</a></td>
+            <td><a (click)="onEditClick(client)" href="#" class="btn btn-default">Edit</a> 
+            <a (click)="onDeleteClick(client._id)" href="#" class="btn btn-danger">Delete</a></td>
         </tr>
     </table>
 </div>
